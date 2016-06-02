@@ -14,7 +14,19 @@ This is because the new interval [4,9] overlaps with [3,5],[6,7],[8,10].
 这道题是56题的加强版，但是感觉没有任何变化。如果是插入操作的话，在集合中插入一个新的Interval，然后再进行
 merge操作。其实也就是调用56题的源码。
 
+
 public class Solution {
+    public List<Interval> insert(List<Interval> intervals, Interval newInterval) {
+        List<Interval> res=new ArrayList<>();
+        if(intervals.size()==0){
+            res.add(newInterval);
+            return res;
+        }
+        intervals.add(newInterval);
+        res=merge(intervals);
+
+        return res;
+    }
     public List<Interval> merge(List<Interval> intervals) {
         if(intervals==null||intervals.size()<=1){
             return intervals;
