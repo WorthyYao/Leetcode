@@ -26,9 +26,8 @@
 */
 
 //该算法复杂度为o(n)
-package hello;
 import java.util.Scanner;
-public class hello {
+public class Solution {
 	public static int MaxSubseqSum(int A[],int n){
 		int ThisSum=0;
 		int MaxSum=0;
@@ -41,24 +40,6 @@ public class hello {
 				ThisSum=0;
 			}
 		}
-		System.out.println(MaxSum);
 		return MaxSum;
 	}
-	
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		
-		Scanner in=new Scanner(System.in);
-		int n=in.nextInt();		
-		int A[]=new int[n];
-		for(int i=0;i<A.length;i++){
-			A[i]=in.nextInt();
-		}
-//		for(int i=0;i<A.length;i++){
-//			System.out.println(A[i]);
-//		}
-		MaxSubseqSum(A, n);
-		
-	}
-
 }
