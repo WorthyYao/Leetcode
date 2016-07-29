@@ -13,7 +13,6 @@
 
 public class Solution {
     public int strStr(String haystack, String needle) {
-        
         //一次循环，判断当前开始是否是相同的
         for(int i=0;i<=haystack.length()-needle.length();i++){
           //如果两个字符串相同的情况下，则返回位置，否则返回-1
